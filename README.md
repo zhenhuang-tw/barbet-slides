@@ -15,13 +15,13 @@ The name refers to the Taiwan barbet (_Psilopogon nuchalis_), a bird endemic to 
 Create a new deck from the template:
 
 ```sh
-typst init @preview/barbet-slides:0.2.0 my-talk
+typst init @preview/barbet-slides:0.2.1 my-talk
 ```
 
 Or use the package in an existing file:
 
 ```typ
-#import "@preview/barbet-slides:0.2.0": *
+#import "@preview/barbet-slides:0.2.1": *
 
 #show: deck.with()
 
@@ -47,23 +47,23 @@ Or use the package in an existing file:
 
 ### Set-up
 
-| Name | Description |
-| --- | --- |
+| Name                                                                                                                                                                 | Description                                                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `deck(ratio: "16-9", theme: c.accent, font: "Noto Sans TC", font-size: 18pt, back-color: c.bg, link-style: "color", progress-height: 3pt, lang: "zh", region: "tw")` | Show rule for the whole deck: applies typslides with page numbers and a progress bar, the text language and the table style. `link-style` is `"color"`, `"underline"` or `"both"`. |
-| `hidden-bibliography(source, style: "apa")` | Loads a bibliography so that `cite` works, without printing the list. |
+| `hidden-bibliography(source, style: "apa")`                                                                                                                          | Loads a bibliography so that `cite` works, without printing the list.                                                                                                              |
 
 typslides functions are re-exported: `front-slide`, `title-slide`, `slide`, `focus-slide`, `blank-slide`, `bibliography-slide`, `table-of-contents`, `cols`, `framed`, `stress`, `pause`, `only`, `uncover` and the colour presets. See the [typslides documentation](https://typst.app/universe/package/typslides) for their parameters.
 
 ### Text
 
-| Name | Description |
-| --- | --- |
-| `hl(body)` | Bold, accent colour. |
-| `hd(body)` | Bold, heading colour. |
-| `case(body)` | Medium weight, accent colour, for case names and docket numbers. |
-| `mute(body)` | Muted colour. |
-| `small(body, size: 13pt)` | Small, muted note. |
-| `chip(body, fill: c.chip-bg, color: c.chip-text)`, `achip(body)` | Inline label; `achip` is the accent variant. |
+| Name                                                             | Description                                                      |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `hl(body)`                                                       | Bold, accent colour.                                             |
+| `hd(body)`                                                       | Bold, heading colour.                                            |
+| `case(body)`                                                     | Medium weight, accent colour, for case names and docket numbers. |
+| `mute(body)`                                                     | Muted colour.                                                    |
+| `small(body, size: 13pt)`                                        | Small, muted note.                                               |
+| `chip(body, fill: c.chip-bg, color: c.chip-text)`, `achip(body)` | Inline label; `achip` is the accent variant.                     |
 
 ### Verdicts
 
@@ -71,19 +71,19 @@ typslides functions are re-exported: `front-slide`, `title-slide`, `slide`, `foc
 
 ### Blocks
 
-| Name | Description |
-| --- | --- |
-| `card(title: none, icon: none, fill: c.surface, stroke: c.border, body)` | Bordered card with an optional title and icon name. |
-| `note(icon: none, body)` | Soft blue callout with an accent bar on the left. |
-| `banner(body, icon: none, size: 16pt)` | Accent bar with white text, for summaries. |
-| `excerpt(body, source: none, size: 15pt)` | Block quote with an optional source line. |
-| `step(title, body: none, fill: c.surface, stroke: c.border, head: c.accent)` | Full-height box for step diagrams in a grid row. |
-| `node(body, tone: "plain", width: 100%, height: auto, size: 15pt)` | Centred box. `tone` is `"plain"`, `"soft"`, `"accent"` or `"outline"`. |
-| `num-badge(n, radius: 13pt, tone: "accent")` | Numbered circle aligned with the text line. |
-| `rarr`, `darr` | Right and down arrows for flow diagrams. |
-| `timeline(items, date-size: 22pt, size: 14pt)` | Evenly spaced timeline; `items` is an array of `(date, title)` or `(date, title, note)`. |
-| `tl-node(date, title, body, result: none, emph: false, height: 6.2cm)` | Card-style timeline node, for laying out a timeline by hand in a grid. |
-| `src(..items)` | Small source line in the bottom-left corner of a slide; items are joined with `；`. |
+| Name                                                                         | Description                                                                              |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `card(title: none, icon: none, fill: c.surface, stroke: c.border, body)`     | Bordered card with an optional title and icon name.                                      |
+| `note(icon: none, body)`                                                     | Soft blue callout with an accent bar on the left.                                        |
+| `banner(body, icon: none, size: 16pt)`                                       | Accent bar with white text, for summaries.                                               |
+| `excerpt(body, source: none, size: 15pt)`                                    | Block quote with an optional source line.                                                |
+| `step(title, body: none, fill: c.surface, stroke: c.border, head: c.accent)` | Full-height box for step diagrams in a grid row.                                         |
+| `node(body, tone: "plain", width: 100%, height: auto, size: 15pt)`           | Centred box. `tone` is `"plain"`, `"soft"`, `"accent"` or `"outline"`.                   |
+| `num-badge(n, radius: 13pt, tone: "accent")`                                 | Numbered circle aligned with the text line.                                              |
+| `rarr`, `darr`                                                               | Right and down arrows for flow diagrams.                                                 |
+| `timeline(items, date-size: 22pt, size: 14pt)`                               | Evenly spaced timeline; `items` is an array of `(date, title)` or `(date, title, note)`. |
+| `tl-node(date, title, body, result: none, emph: false, height: 6.2cm)`       | Card-style timeline node, for laying out a timeline by hand in a grid.                   |
+| `src(..items)`                                                               | Small source line in the bottom-left corner of a slide; items are joined with `；`.      |
 
 ### Icons and colours
 

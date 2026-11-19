@@ -15,13 +15,13 @@
 以範本建立新簡報：
 
 ```sh
-typst init @preview/barbet-slides:0.2.0 my-talk
+typst init @preview/barbet-slides:0.2.1 my-talk
 ```
 
 或在既有檔案中匯入：
 
 ```typ
-#import "@preview/barbet-slides:0.2.0": *
+#import "@preview/barbet-slides:0.2.1": *
 
 #show: deck.with()
 
@@ -45,14 +45,14 @@ typst init @preview/barbet-slides:0.2.0 my-talk
 
 ## 函式一覽
 
-| 類別 | 名稱 |
-| --- | --- |
-| 設定 | `deck`（全域樣式）、`hidden-bibliography` |
-| 文字 | `hl`、`hd`、`case`、`mute`、`small`、`chip`／`achip` |
-| 判斷結果 | `yes`、`no`、`maybe`、`partly` |
-| 區塊 | `card`、`note`、`banner`、`excerpt`、`step`、`node`、`num-badge`、`rarr`／`darr`、`timeline`、`tl-node`、`src` |
-| 圖示與色票 | `ic("名稱")`、`c`（`c.accent`、`c.bg`…） |
-| typslides 轉出 | `front-slide`、`title-slide`、`slide`、`focus-slide`、`pause`、`only`、`uncover` 等 |
+| 類別           | 名稱                                                                                                           |
+| -------------- | -------------------------------------------------------------------------------------------------------------- |
+| 設定           | `deck`（全域樣式）、`hidden-bibliography`                                                                      |
+| 文字           | `hl`、`hd`、`case`、`mute`、`small`、`chip`／`achip`                                                           |
+| 判斷結果       | `yes`、`no`、`maybe`、`partly`                                                                                 |
+| 區塊           | `card`、`note`、`banner`、`excerpt`、`step`、`node`、`num-badge`、`rarr`／`darr`、`timeline`、`tl-node`、`src` |
+| 圖示與色票     | `ic("名稱")`、`c`（`c.accent`、`c.bg`…）                                                                       |
+| typslides 轉出 | `front-slide`、`title-slide`、`slide`、`focus-slide`、`pause`、`only`、`uncover` 等                            |
 
 `deck` 可覆寫 `theme`、`font`、`font-size`、`back-color`、`link-style`（`"color"`、`"underline"` 或 `"both"`）、`progress-height`（進度條高度，預設 `3pt`）、`lang`、`region`、`ratio`。
 
@@ -76,7 +76,7 @@ cd barbet-slides
 
 ```powershell
 .\install.ps1 -PackageRoot "$env:APPDATA\typst\packages\preview"
-typst init @preview/barbet-slides:0.2.0 test-deck
+typst init @preview/barbet-slides:0.2.1 test-deck
 ```
 
 測試完請刪除該連接，以免日後蓋過 Universe 上的正式版本。

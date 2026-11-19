@@ -32,7 +32,7 @@
   )
   #v(6pt)
   #note(icon: "alert")[提示區塊：補充說明或保留意見。]
-  #src(cite(<example>))
+  #src(cite(<zhangsan2022>))
 ]
 
 #slide(title: "流程與時間軸")[

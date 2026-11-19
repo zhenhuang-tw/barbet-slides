@@ -2,7 +2,7 @@
 // 本檔由 barbet-slides 範本產生，可自由修改、使用與散布，無須保留本授權聲明。
 // 編譯：typst compile main.typ
 
-#import "@preview/barbet-slides:0.1.0": *
+#import "@preview/barbet-slides:0.2.0": *
 
 #show: deck.with()
 

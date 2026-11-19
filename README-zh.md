@@ -15,13 +15,13 @@
 以範本建立新簡報：
 
 ```sh
-typst init @preview/barbet-slides:0.1.0 my-talk
+typst init @preview/barbet-slides:0.2.0 my-talk
 ```
 
 或在既有檔案中匯入：
 
 ```typ
-#import "@preview/barbet-slides:0.1.0": *
+#import "@preview/barbet-slides:0.2.0": *
 
 #show: deck.with()
 
@@ -76,7 +76,7 @@ cd barbet-slides
 
 ```powershell
 .\install.ps1 -PackageRoot "$env:APPDATA\typst\packages\preview"
-typst init @preview/barbet-slides:0.1.0 test-deck
+typst init @preview/barbet-slides:0.2.0 test-deck
 ```
 
 測試完請刪除該連接，以免日後蓋過 Universe 上的正式版本。

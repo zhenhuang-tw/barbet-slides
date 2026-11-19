@@ -15,13 +15,13 @@ The name refers to the Taiwan barbet (_Psilopogon nuchalis_), a bird endemic to 
 Create a new deck from the template:
 
 ```sh
-typst init @preview/barbet-slides:0.1.0 my-talk
+typst init @preview/barbet-slides:0.2.0 my-talk
 ```
 
 Or use the package in an existing file:
 
 ```typ
-#import "@preview/barbet-slides:0.1.0": *
+#import "@preview/barbet-slides:0.2.0": *
 
 #show: deck.with()
 

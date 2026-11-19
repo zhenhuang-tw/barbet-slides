@@ -1,6 +1,6 @@
 // 最小範例：在 repo 根目錄執行  typst compile examples/minimal.typ --root .
-// （安裝為 local package 後，任何位置的簡報都可用相同 import）
-#import "@local/barbet-slides:0.1.0": *
+// 未發佈前請先以 install.ps1 -PackageRoot 安裝到 preview 命名空間（見 README-zh.md）
+#import "@preview/barbet-slides:0.1.0": *
 
 #show: deck.with()
 

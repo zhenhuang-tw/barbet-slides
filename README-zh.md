@@ -6,7 +6,7 @@
 
 ## 環境需求
 
-- Typst 0.14 或以上
+- Typst 0.15 或以上
 - 字型：Noto Sans TC
 - Windows（附 `install.ps1`）；其他系統請自行把本資料夾放（或連結）到 Typst 的 local package 目錄
 - 首次編譯時，Typst 會自動下載 `@preview/typslides`

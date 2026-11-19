@@ -35,7 +35,7 @@ typst init @preview/barbet-slides:0.2.1 my-talk
     #partly[部分違憲]
   ]
   #note(icon: "alert")[#case[111憲判2] 的射程不限於公開道歉。]
-  #src(cite(<example>))
+  #src(cite(<zhangsan2022>))
 ]
 
 #hidden-bibliography(path("refs.bib"))

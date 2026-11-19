@@ -1,5 +1,6 @@
 // icons.typ — 自繪 SVG 圖示（stroke 風格、24×24 viewBox，無外部依賴）
 // 新增圖示：在 `_icons` 加一筆 `名稱: "<path d='…'/>"`，即可用 `#ic("名稱")`。
+// 需要填色的部分寫 `fill='currentColor'`，會套用 ic() 的 color。
 
 #import "palette.typ": c
 
@@ -36,13 +37,19 @@
   arrow: "<path d='M5 12h14M13 6l6 6-6 6'/>",
   down: "<path d='M12 5v14M6 13l6 6 6-6'/>",
   link: "<path d='M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1'/><path d='M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1'/>",
+  vote: "<path d='M3 13h18v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/><path d='M8 13V4h8v9'/><path d='M10.5 8.5l1.3 1.3 2.2-2.6'/><path d='M7 17h10'/>",
+  plus: "<circle cx='12' cy='12' r='9'/><path d='M12 8v8M8 12h8'/>",
+  ban: "<circle cx='12' cy='12' r='9'/><path d='M5.6 5.6l12.8 12.8'/>",
+  half: "<circle cx='12' cy='12' r='9'/><path d='M12 3a9 9 0 0 0 0 18z' fill='currentColor'/>",
 )
 
 #let ic(name, color: c.accent, size: 1em) = box(
   baseline: 0.15em,
   image(
     bytes(
-      "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='"
+      "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' color='"
+        + color.to-hex()
+        + "' stroke='"
         + color.to-hex()
         + "' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>"
         + _icons.at(name)

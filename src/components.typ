@@ -57,6 +57,7 @@
 #let yes(body) = [#ic("yes") #body]
 #let no(body) = [#ic("no", color: c.subtle) #body]
 #let maybe(body) = [#ic("maybe", color: c.muted) #body]
+#let partly(body) = [#ic("half") #body]
 
 // 流程箭頭
 #let rarr = align(center + horizon, ic("arrow", color: c.muted, size: 1.3em))

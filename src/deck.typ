@@ -1,0 +1,53 @@
+// deck.typ — 全域簡報設定
+// 用法：#show: deck.with(...)
+// 注意：Typst 的 #set / #show 不會跨檔案生效，故必須包成函式，由簡報檔以 `show: deck` 套用。
+
+#import "@preview/typslides:1.3.4": typslides
+#import "palette.typ": c
+
+#let deck(
+  ratio: "16-9",
+  theme: c.accent,
+  font: "Noto Sans TC",
+  font-size: 18pt,
+  back-color: c.bg,
+  lang: "zh",
+  region: "tw",
+  body,
+) = {
+  show: typslides.with(
+    ratio: ratio,
+    theme: theme,
+    font: font,
+    font-size: font-size,
+    link-style: "color",
+    show-page-numbers: true,
+    show-progress: true,
+    back-color: back-color,
+  )
+  set text(lang: lang, region: region, fill: c.text)
+  set par(leading: 0.62em)
+  set list(spacing: 0.7em)
+
+  // 表格樣式
+  set table(
+    stroke: (x, y) => (
+      bottom: if y == 0 { 1.2pt + c.accent } else { 0.5pt + c.border },
+    ),
+    fill: (x, y) => if y == 0 { c.accent } else if calc.even(y) { c.border-soft } else { c.surface },
+    inset: (x: 7pt, y: 6pt),
+    align: left + horizon,
+  )
+  show table.cell.where(y: 0): set text(fill: white, weight: "bold")
+
+  body
+}
+
+// 參考文獻：只供 cite() 解析，不在頁面輸出清單。
+// 注意：套件內函式收到的「路徑字串」會相對於套件資料夾解析，而非簡報檔，
+// 所以這裡接收的是已讀入的位元組，呼叫端須自行 read：
+//   #hidden-bibliography(read("/ref.bib", encoding: none))
+#let hidden-bibliography(data, style: "apa") = {
+  show bibliography: none
+  bibliography(data, style: style)
+}

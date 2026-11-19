@@ -46,6 +46,12 @@
 // 重點字
 #let hl(body) = text(fill: c.accent, weight: "bold", body)
 #let mute(body) = text(fill: c.muted, body)
+// 深色粗體：卡片內的小標、表格中的重點
+#let hd(body) = text(fill: c.heading, weight: "bold", body)
+// 案名、判決字號
+#let case(body) = text(fill: c.accent, weight: "medium", body)
+// 小字註記
+#let small(body, size: 13pt) = text(size: size, fill: c.muted, body)
 
 // 判斷結果（形狀＋文字，不僅靠顏色）
 #let yes(body) = [#ic("yes") #body]

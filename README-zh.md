@@ -58,7 +58,7 @@ git pull
 | `src/deck.typ`       | `deck`（全域樣式）、`hidden-bibliography`                                                                     |
 | `lib.typ`            | 入口；同時轉出 typslides 的 `slide`、`title-slide`、`front-slide`、`focus-slide` 等                           |
 
-`deck` 可覆寫 `theme`、`font`、`font-size`、`back-color`、`lang`、`region`、`ratio`。
+`deck` 可覆寫 `theme`、`font`、`font-size`、`back-color`、`link-style`（`"color"`、`"underline"` 或 `"both"`）、`progress-height`（進度條高度，預設 `3pt`）、`lang`、`region`、`ratio`。
 
 ## 注意
 

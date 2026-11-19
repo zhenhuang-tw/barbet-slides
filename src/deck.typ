@@ -11,6 +11,8 @@
   font: "Noto Sans TC",
   font-size: 18pt,
   back-color: c.bg,
+  link-style: "color",
+  progress-height: 3pt,
   lang: "zh",
   region: "tw",
   body,
@@ -20,9 +22,10 @@
     theme: theme,
     font: font,
     font-size: font-size,
-    link-style: "color",
+    link-style: link-style,
     show-page-numbers: true,
     show-progress: true,
+    progress-height: progress-height,
     back-color: back-color,
   )
   set text(lang: lang, region: region, fill: c.text)

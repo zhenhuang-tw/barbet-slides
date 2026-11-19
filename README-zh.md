@@ -54,7 +54,7 @@ git pull
 | -------------------- | ------------------------------------------------------------------------------------------------------------- |
 | `src/palette.typ`    | 色票 `c`（`c.accent`、`c.bg`…）                                                                               |
 | `src/icons.typ`      | `ic("名稱")` 與內建 SVG 圖示                                                                                  |
-| `src/components.typ` | `card`、`note`、`chip`／`achip`、`hl`、`mute`、`hd`、`case`、`small`、`yes`／`no`／`maybe`／`partly`、`step`、`rarr`／`darr`、`src`、`tl-node` |
+| `src/components.typ` | `card`、`note`、`chip`／`achip`、`hl`、`mute`、`hd`、`case`、`small`、`yes`／`no`／`maybe`／`partly`、`step`、`rarr`／`darr`、`src`、`tl-node`、`timeline`、`node`、`num-badge`、`excerpt`、`banner` |
 | `src/deck.typ`       | `deck`（全域樣式）、`hidden-bibliography`                                                                     |
 | `lib.typ`            | 入口；同時轉出 typslides 的 `slide`、`title-slide`、`front-slide`、`focus-slide` 等                           |
 

@@ -72,3 +72,5 @@ git pull
 Copyright (C) 2026 Zhen Huang.
 
 本套件以 GNU 通用公共授權條款第 3 版或任何更新版本（[GPL-3.0-or-later](LICENSE)）授權。本套件匯入並轉出 [typslides](https://github.com/manjavacas/typslides)，而 typslides 本身以 GPL-3.0-or-later 授權；為與其相容，本套件採用相同授權。
+
+例外：`template/` 內的檔案（`typst init` 會複製到新專案）改以 [MIT-0](LICENSE-MIT-0) 授權，以範本建立的簡報可自由使用與散布，無須署名。

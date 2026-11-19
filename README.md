@@ -11,3 +11,5 @@ The name refers to the Taiwan barbet (_Psilopogon nuchalis_), a bird endemic to 
 Copyright (C) 2026 Zhen Huang.
 
 barbet-slides is licensed under the GNU General Public License v3.0 or later ([GPL-3.0-or-later](LICENSE)). It imports and re-exports [typslides](https://github.com/manjavacas/typslides), which is itself licensed under GPL-3.0-or-later; barbet-slides uses the same license to stay compatible with it.
+
+The files in `template/`, which `typst init` copies into a new project, are licensed under [MIT-0](LICENSE-MIT-0) instead, so decks created from the template can be used and shared without restriction or attribution.

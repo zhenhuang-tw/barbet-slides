@@ -2,3 +2,6 @@
 *.pdf
 *.png
 *.svg
+
+# Typst Universe 範本縮圖
+!/thumbnail.png

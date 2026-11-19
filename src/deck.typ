@@ -2,7 +2,7 @@
 // 用法：#show: deck.with(...)
 // 注意：Typst 的 #set / #show 不會跨檔案生效，故必須包成函式，由簡報檔以 `show: deck` 套用。
 
-#import "@preview/typslides:1.3.4": typslides
+#import "@preview/typslides:1.4.0": typslides
 #import "palette.typ": c
 
 #let deck(

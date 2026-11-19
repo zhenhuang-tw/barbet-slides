@@ -7,3 +7,5 @@ license = "MIT"
 description = "Slide theme for zh-Hant-TW law school presentations, built on typslides."
 repository = "https://github.com/zhenhuang-tw/barbet-slides"
 compiler = "0.15.0"
+categories = ["presentation", "layout", "components"]
+keywords = ["slides", "presentation", "chinese", "traditional-chinese", "zh-TW", "taiwan", "typslides", "law"]

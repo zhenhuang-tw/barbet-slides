@@ -44,10 +44,15 @@
 }
 
 // 參考文獻：只供 cite() 解析，不在頁面輸出清單。
-// 注意：套件內函式收到的「路徑字串」會相對於套件資料夾解析，而非簡報檔，
-// 所以這裡接收的是已讀入的位元組，呼叫端須自行 read：
-//   #hidden-bibliography(read("/ref.bib", encoding: none))
-#let hidden-bibliography(data, style: "apa") = {
+// 注意：套件內函式收到的「路徑字串」會相對於套件資料夾解析，而非簡報檔。
+// Typst 0.15 起可傳入 `path` 值，它會相對於建立它的檔案解析，並可跨套件邊界：
+//   #hidden-bibliography(path("/ref.bib"))
+// 也可傳入以 `read(..., encoding: none)` 讀入的位元組。
+#let hidden-bibliography(source, style: "apa") = {
+  assert(
+    type(source) != str,
+    message: "hidden-bibliography: 請傳入 path(\"…\") 或位元組，而非字串；字串路徑會相對於本套件解析",
+  )
   show bibliography: none
-  bibliography(data, style: style)
+  bibliography(source, style: style)
 }

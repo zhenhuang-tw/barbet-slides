@@ -25,4 +25,4 @@
   #src(cite(<demo>))
 ]
 
-#hidden-bibliography(read("refs.bib", encoding: none))
+#hidden-bibliography(path("refs.bib"))

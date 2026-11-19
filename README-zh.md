@@ -43,7 +43,7 @@ git pull
   #src(cite(<key>))
 ]
 
-#hidden-bibliography(read("/ref.bib", encoding: none))
+#hidden-bibliography(path("/ref.bib"))
 ```
 
 完整範例見 [`examples/minimal.typ`](examples/minimal.typ)。
@@ -62,7 +62,7 @@ git pull
 
 ## 注意
 
-- **參考文獻路徑：** 套件內函式收到的路徑字串，會相對於套件資料夾解析，而非你的簡報檔。因此 `hidden-bibliography` 接收的是 `read(..., encoding: none)` 讀入的位元組，而非路徑。
+- **參考文獻路徑：** 套件內函式收到的路徑「字串」，會相對於套件資料夾解析，而非你的簡報檔。因此 `hidden-bibliography` 要傳 `path("…")`（Typst 0.15 起可用，相對於呼叫它的檔案）或 `read(..., encoding: none)` 讀入的位元組；傳字串會直接報錯。
 - **`c` 會進入你的命名空間：** `import *` 後，簡報內請勿再自行定義 `c`。
 - **版本不等於 commit：** local package 以版本號定位，但 junction 指向的是 repo 工作樹；只要不改 `typst.toml` 的版本，修改會直接影響所有使用該版本的簡報。有破壞性變更時請升版。
 - typslides 版本在 `lib.typ` 與 `src/deck.typ` 兩處釘選，升級時須一併修改。
